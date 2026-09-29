@@ -1,3 +1,3 @@
-- [ ] Add a skippable opening tutorial for the consonant/vowel stop-name game.
-- [ ] Redesign consonant/vowel cards as bus hanging handles.
-- [ ] Verify tutorial and game on desktop and tablet.
+- [x] Add a skippable opening tutorial for the consonant/vowel stop-name game.
+- [x] Redesign consonant/vowel cards as bus hanging handles.
+- [x] Verify tutorial and game on desktop and tablet.
