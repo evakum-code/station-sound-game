@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the standalone Korean bus game in one HTML file; its optional tutorial completion is stored in browser storage with a safe fallback so the game works offline and without storage.
