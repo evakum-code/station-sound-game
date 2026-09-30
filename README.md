@@ -1,14 +1,94 @@
-# Welcome to your Lovable project
+# Bus Stop Reader
+
+버스 타기 국어 게임 A버전 (정류장 이름 읽기) — AI 제작 프롬프트
+
+아래 프롬프트를 다른 AI에 그대로 붙여 넣어 사용하세요.
+
+너는 특수교육 교사와 함께 일하는 교육용 웹 게임 개발자야.
+아래 기획안을 그대로 따라서 "버스 타기 국어 게임 – 정류장 이름 읽기"를 만들어 줘.
+
+[대상]
+- 초등학교 1학년, 경계선 지능 아동
+- 태블릿으로 손가락 터치만 써서 혼자 할 수 있어야 함
+
+[학습 목표]
+- 받침 없는 글자와 받침 있는 글자를 소리 내어 읽기 (초1 국어: 읽기·문법 영역)
+- 교실에서 배운 글자 읽기를 실제 버스 안 상황(정류장 이름 찾기)에 써 보기
+
+[핵심 규칙]
+- 버스 안내 방송이 "다음 정류장은 ○○입니다"라고 말한다.
+- 화면에 정류장 표지판(선택지)이 보인다.
+- 방송과 같은 이름의 표지판을 눌러야 하차벨이 "딩동" 울리고 버스가 다음 정류장으로 간다.
+- 정답을 맞혀야만 다음으로 넘어간다.
+
+[한 판 흐름: 정류장 5개, 3~5분]
+1. 시작 화면: "오늘은 버스를 타고 [도착 정류장]에 가요" + [출발] 버튼
+2. 정류장 1~5: 방송 → 표지판 고르기 → 정답이면 딩동 → 버스가 달려서 다음 정류장
+3. 5번째 정류장이 도착지: 맞히면 "도착했어요!" 화면
+4. 도착 화면: 스티커 5개 + "진짜 버스 미션" 카드 + [다시 하기] 버튼
+- 매 판 같은 순서로 진행해서 아이가 흐름을 예측할 수 있게 한다.
+- 화면 위쪽에 버스 노선 진행 막대(정류장 5개 점)를 보여 준다.
+
+[난이도 3단계] (시작 화면에서 교사가 고름)
+- 1단계: 받침 없는 낱말, 선택지 2개
+  낱말: 바다, 나무, 우리, 하나, 오리, 사자, 모자, 기차, 호수, 가구
+- 2단계: 받침 있는 낱말, 선택지 3개
+  낱말: 공원, 병원, 시장, 학교, 은행, 약국, 소방서, 도서관, 우체국, 놀이터
+- 3단계: 모양이 비슷한 낱말 구별, 선택지 3개
+  묶음: 공원/공항/공장, 시장/시청/시소, 학교/학원/학생, 병원/방울/병아리, 은행/은하/인형
+- 오답 선택지는 같은 단계 낱말에서 무작위로 고르고, 문항 순서도 매 판 섞는다.
+
+[경계선 지능 아동을 위한 설계 규칙 — 꼭 지킬 것]
+- 한 화면에는 과제 하나만. 지시문은 한 문장, 짧고 쉬운 말.
+- 모든 글자와 지시문 옆에 🔊 버튼. 누르면 한국어 음성으로 읽어 준다.
+- 방송은 자동으로 1번 나오고, [방송 다시 듣기] 버튼으로 몇 번이든 다시 들을 수 있다.
+- 표지판 버튼은 크게 (최소 120px 높이), 글자는 크고 굵게 (최소 48px), 버튼 사이 간격은 넉넉하게.
+- 틀리면 벌점 없음. 버튼이 살짝 흔들리고 "다시 해 볼까?"라고 부드럽게 말한 뒤 바로 다시 고르게 한다.
+- 같은 문항에서 2번 틀리면 정답 표지판이 반짝이는 힌트를 준다.
+- 정답이면 곧바로 칭찬: 딩동 소리 + "잘 읽었어요!" 같은 칭찬 문장(여러 개 중 무작위) + 별 효과.
+- 시간 제한, 점수 깎기, 실패 화면은 넣지 않는다.
+- 색은 차분하게, 화려한 깜빡임이나 큰 소리는 쓰지 않는다.
+- 화면 오른쪽 위에 소리 켜기/끄기 버튼.
+
+[진짜 버스 미션 카드] (도착 화면에서 1장 무작위)
+- 버스 안 전광판에서 아는 글자를 하나 찾아 읽어 보기
+- 정류장 표지판 이름을 소리 내어 읽어 보기
+- 내릴 정류장 이름을 어른과 함께 미리 말해 보기
+- 하차벨을 누르기 전에 전광판 이름을 확인하기
+
+[교사·보호자용 기록 화면] (시작 화면 구석의 작은 버튼으로 들어감)
+- 문항별: 낱말, 정답까지 시도 횟수(1번/2번/힌트), 방송 다시 듣기 횟수
+- 자주 틀린 낱말 목록
+- 기록은 브라우저에만 저장하고, 저장이 안 되는 환경에서도 게임은 정상 작동해야 한다.
+
+[맞춤 설정]
+- 시작 화면에서 교사가 정류장 이름을 직접 입력해 바꿀 수 있게 한다.
+  (아이가 실제로 사는 동네 정류장 이름을 넣으면 생활 연계 효과가 커짐)
+
+[기술 요구사항]
+- HTML/CSS/JavaScript 파일 하나로 만든다. 외부 이미지나 파일 없이 바로 열려야 한다.
+- 버스, 표지판, 창밖 풍경은 CSS나 SVG로 그린다. (특정 캐릭터나 브랜드 이미지는 쓰지 않는다)
+- 음성은 브라우저 음성 합성(Web Speech API, lang="ko-KR")을 쓰고, 말하는 속도는 조금 느리게 (rate 0.85 정도).
+- 효과음(딩동, 부릉)은 Web Audio API로 간단히 만든다.
+- 태블릿 가로·세로 화면과 PC 화면 모두에서 깨지지 않게 한다.
+- 모든 화면 문구는 한국어로 쓴다.
+
+[결과물]
+- 완성된 HTML 파일 전체 코드
+- 마지막에 교사가 낱말 목록을 바꾸는 방법을 3줄 이내로 설명
+디자인은 첨부한 사진이랑 비슷한 분위기로 해줘
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://station-sound-game.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/db55462d-c3d2-4b5f-84ba-0e09b1520597).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +100,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
