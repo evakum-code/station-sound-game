@@ -1,6 +1,6 @@
 - [x] Add a skippable opening tutorial for the consonant/vowel stop-name game.
 - [x] Redesign consonant/vowel cards as bus hanging handles.
 - [x] Verify tutorial and game on desktop and tablet.
-- [ ] Restore the consonant and vowel choices to simple cards.
-- [ ] Replace every bus and celebration emoji with original drawn artwork.
-- [ ] Verify the revised tutorial, cards, and artwork across screen sizes.
+- [x] Restore the consonant and vowel choices to simple cards.
+- [x] Replace every bus and celebration emoji with original drawn artwork.
+- [x] Verify the revised tutorial, cards, and artwork across screen sizes.
