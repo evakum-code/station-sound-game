@@ -4,5 +4,5 @@
 - [x] Restore the consonant and vowel choices to simple cards.
 - [x] Replace every bus and celebration emoji with original drawn artwork.
 - [x] Verify the revised tutorial, cards, and artwork across screen sizes.
-- [ ] Change the game artwork and controls to a bright pixel style while preserving gameplay.
-- [ ] Verify the pixel game and tutorial across screen sizes.
+- [x] Change the game artwork and controls to a bright pixel style while preserving gameplay.
+- [x] Verify the pixel game and tutorial across screen sizes.

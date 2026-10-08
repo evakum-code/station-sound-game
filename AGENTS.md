@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep the standalone Korean bus game in one HTML file; its optional tutorial completion is stored in browser storage with a safe fallback so the game works offline and without storage.
+- Render the bus game's original pixel scenery on a low-resolution canvas and embed its Korean pixel font in the standalone HTML so artwork stays crisp and works offline.
